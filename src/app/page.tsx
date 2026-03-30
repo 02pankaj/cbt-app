@@ -90,7 +90,7 @@ export default function LoginPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shadow-[0_0_10px_#60a5fa]"></span>
               Verified Assessment
             </div>
-            <h2 className="text-4xl font-black italic uppercase mb-4 bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent tracking-tighter">Candidate Portal</h2>
+            <h2 className="text-4xl font-black italic uppercase mb-4 bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent tracking-tighter">Student Login</h2>
             <p className="text-gray-500 text-sm leading-relaxed mb-10 font-medium">Initialize secure examination modules, review academic performance analytics, and manage your global certification profile.</p>
             <button onClick={() => handleGoogleLogin("student")} disabled={isConnecting} className="w-full flex items-center justify-between p-5 rounded-2xl bg-white/[0.02] border border-white/10 text-gray-500 text-[11px] font-black tracking-widest transition-all group-hover:text-white group-hover:border-blue-500 group-hover:bg-blue-500/10 group-hover:shadow-[0_0_25px_rgba(59,130,246,0.4)] disabled:opacity-50">
               INITIALIZE SESSION <span>→</span>
@@ -103,7 +103,7 @@ export default function LoginPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_10px_#c084fc]"></span>
               System Authority
             </div>
-            <h2 className="text-4xl font-black italic uppercase mb-4 bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent tracking-tighter">Proctor Dashboard</h2>
+            <h2 className="text-4xl font-black italic uppercase mb-4 bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent tracking-tighter">Admin Login</h2>
             <p className="text-gray-500 text-sm leading-relaxed mb-10 font-medium">Monitor live examination nodes, verify candidate integrity, and manage enterprise-level data distribution.</p>
             <button onClick={() => handleGoogleLogin("admin")} disabled={isConnecting} className="w-full flex items-center justify-between p-5 rounded-2xl bg-white/[0.02] border border-white/10 text-gray-500 text-[11px] font-black tracking-widest transition-all group-hover:text-white group-hover:border-purple-500 group-hover:bg-purple-500/10 group-hover:shadow-[0_0_25px_rgba(168,85,247,0.4)] disabled:opacity-50">
               ACCESS COMMAND <span>→</span>
