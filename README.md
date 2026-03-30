@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Aquilon CBT System (Computer-Based Testing)
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-15.x-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19.x-blue?style=for-the-badge&logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Firebase](https://img.shields.io/badge/Firebase-Firestore_%26_Auth-FFCA28?style=for-the-badge&logo=firebase)
+![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178C6?style=for-the-badge&logo=typescript)
 
-First, run the development server:
+**Live Demo:** [https://cbt-app-pink.vercel.app](https://cbt-app-pink.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A high-performance, fully secure, and highly immersive Computer-Based Testing (CBT) platform built with **Next.js (App Router)** and **Firebase**. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Aquilon features a sleek, terminal-inspired UI, strict role-based access control via Edge Middleware, and a real-time data pipeline for instant assessment grading and telemetry.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Core Features
 
-## Learn More
+### 🛡️ System & Security
+* **Next.js Edge Middleware:** Impenetrable route security using secure cookies to prevent URL-hopping between User and Admin nodes.
+* **Role-Based Authentication:** Seamless Google OAuth integration that dynamically routes users based on their database clearance level.
+* **Cyberpunk Aesthetic:** Custom-built UI using Tailwind CSS featuring ambient blurs, glassmorphism, and holographic typography.
 
-To learn more about Next.js, take a look at the following resources:
+### 👨‍💻 Admin Command Center
+* **Headless CMS Matrix:** Dynamically create, read, update, and delete Subjects and nested Topics on the fly.
+* **Bulk Question Injection:** Custom CSV parser allowing admins to upload 100s of questions instantly via a downloadable template.
+* **Global Telemetry Feed:** Real-time dashboard to monitor candidate submissions, auto-calculated accuracy percentages, and pass/fail metrics.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🎓 Candidate Assessment Terminal
+* **Live Testing Interface:** State-retained exam node with visual progress tracking and custom interactive radio inputs.
+* **Temporal Enforcement:** A strict countdown timer that automatically locks and submits the candidate's exam when time expires.
+* **Historical Performance Log:** A dedicated student dashboard displaying past assessment results, dates, and final scores.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🏗️ Project Architecture
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project utilizes the Next.js App Router for highly optimized, nested layouts.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+src/
+├── app/
+│   ├── admin/dashboard/      # Protected Admin Command Center
+│   │   ├── curriculum/       # Subject/Topic/Question CMS
+│   │   ├── results/          # Global Telemetry Feed
+│   │   └── users/            # Candidate Logs
+│   ├── student/
+│   │   ├── dashboard/        # Candidate Profile & History
+│   │   └── test/[sub]/[top]/ # Dynamic Live Assessment Node
+│   ├── layout.tsx            # Root HTML definition
+│   └── page.tsx              # Secure Login Gateway
+├── lib/
+│   └── firebase.ts           # Firebase Initialization & Config
+└── middleware.ts             # Edge Security & Route Protection
