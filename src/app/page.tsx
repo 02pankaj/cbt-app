@@ -91,7 +91,7 @@ export default function LoginPage() {
               Verified Assessment
             </div>
             <h2 className="text-4xl font-black italic uppercase mb-4 bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent tracking-tighter">Student Login</h2>
-            <p className="text-gray-500 text-sm leading-relaxed mb-10 font-medium">Initialize secure examination modules, review academic performance analytics, and manage your global certification profile.</p>
+            <p className="text-gray-500 text-sm leading-relaxed mb-10 font-medium">Initialize secure examination modules, review academic performance, and manage your global certification profile.</p>
             <button onClick={() => handleGoogleLogin("student")} disabled={isConnecting} className="w-full flex items-center justify-between p-5 rounded-2xl bg-white/[0.02] border border-white/10 text-gray-500 text-[11px] font-black tracking-widest transition-all group-hover:text-white group-hover:border-blue-500 group-hover:bg-blue-500/10 group-hover:shadow-[0_0_25px_rgba(59,130,246,0.4)] disabled:opacity-50">
               INITIALIZE SESSION <span>→</span>
             </button>
