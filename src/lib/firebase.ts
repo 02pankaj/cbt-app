@@ -1,20 +1,25 @@
+// /lib/firebase.ts
+
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+// ✅ Config from environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyAfmO9OcgoL2oaVNRDq89-gvpFo54HyRq0",
-  authDomain: "cbt-platform-3d6e2.firebaseapp.com",
-  projectId: "cbt-platform-3d6e2",
-  storageBucket: "cbt-platform-3d6e2.firebasestorage.app",
-  messagingSenderId: "1043360916468",
-  appId: "1:1043360916468:web:1585e8ca610ca4d7034fa1",
-  measurementId: "G-77E25F9W8S"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN!,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID!,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET!,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID!,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID!,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID!,
 };
 
-// 2. Initialize Firebase (This logic prevents double-loading during development)
-const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
+// ✅ Prevent multiple initialization (Next.js fix)
+const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
-// 3. Export these so you can use them in your Login or Exam pages
-export const auth = getAuth(app); // For Login
-export const db = getFirestore(app); // For Database
+// ✅ Firebase services
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+
+export default app;
