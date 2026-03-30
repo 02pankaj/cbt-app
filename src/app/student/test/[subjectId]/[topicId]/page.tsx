@@ -27,7 +27,7 @@ export default function ActiveTestNode() {
   const [score, setScore] = useState(0);
 
   // --- NEW: TIMER STATES ---
-  const TEST_DURATION_SECONDS = 5; // 10 Minutes
+  const TEST_DURATION_SECONDS =3600//60 Minutes
   const [timeLeft, setTimeLeft] = useState(TEST_DURATION_SECONDS);
 
   useEffect(() => {
