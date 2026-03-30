@@ -256,7 +256,7 @@ export default function CurriculumMatrix() {
       <div className="flex justify-between items-center mb-10 border-b border-white/5 pb-6">
         <div>
           <h2 className="text-3xl font-black italic uppercase bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent tracking-tighter">
-            Curriculum Matrix
+            Data Matrix
           </h2>
           <p className="text-[10px] text-gray-500 uppercase tracking-widest mt-2">
             Data Architecture & System Purge
