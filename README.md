@@ -8,7 +8,7 @@
 
 **Live Demo:** [https://cbt-app-pink.vercel.app](https://cbt-app-pink.vercel.app)
 
-A high-performance, fully secure, and highly immersive Computer-Based Testing (CBT) platform built with **Next.js (App Router)** and **Firebase**. 
+A high-performance, fully secure, and highly immersive Computer-Based Testing (CBT) platform built with **Next.js (App Router)** and **Firebase**.
 
 Aquilon features a sleek, terminal-inspired UI, strict role-based access control via Edge Middleware, and a real-time data pipeline for instant assessment grading and telemetry.
 
